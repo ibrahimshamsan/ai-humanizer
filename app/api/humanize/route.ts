@@ -4,12 +4,9 @@ import { rewriteWithLLM } from "@/lib/rewriter";
 import { validate } from "@/lib/validator";
 
 export const runtime = "nodejs";
-export const maxDuration = 120; // زيادة المهلة للسيرفر
+export const maxDuration = 120;
 
-type Body = {
-  text: string;
-  level?: "light" | "medium" | "strong";
-};
+type Body = { text: string; level?: "light" | "medium" | "strong" };
 
 export async function POST(req: Request) {
   try {
@@ -19,9 +16,14 @@ export async function POST(req: Request) {
 
     if (!text)
       return NextResponse.json({ error: "Empty text" }, { status: 400 });
+    if (text.split(/\s+/).length < 20)
+      return NextResponse.json(
+        { error: "Please enter at least 20 words" },
+        { status: 400 },
+      );
     if (text.length > 6000)
       return NextResponse.json(
-        { error: "النص طويل جداً. الحد الأقصى 6000 حرف." },
+        { error: "Character limit exceeded (Max 6000 characters)." },
         { status: 400 },
       );
 

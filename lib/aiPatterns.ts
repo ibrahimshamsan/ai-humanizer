@@ -9,7 +9,6 @@ export type AIPattern = {
 };
 
 export const AI_PATTERNS: AIPattern[] = [
-  // ===== CRITICAL — English =====
   {
     id: "c1",
     severity: "critical",
@@ -108,8 +107,6 @@ export const AI_PATTERNS: AIPattern[] = [
     regex: /\bmyriad\s+of\b/gi,
     label: "myriad of",
   },
-
-  // ===== HIGH — English =====
   {
     id: "h1",
     severity: "high",
@@ -142,130 +139,63 @@ export const AI_PATTERNS: AIPattern[] = [
   },
   { id: "h11", severity: "high", regex: /\bintricate\b/gi, label: "intricate" },
   { id: "h12", severity: "high", regex: /\bparamount\b/gi, label: "paramount" },
-
-  // ===== CRITICAL — Arabic (بصمات قوية) =====
   {
-    id: "ar1",
-    severity: "critical",
-    regex: /بالإضافة إلى ذلك/g,
-    label: "بالإضافة إلى ذلك",
-  },
-  {
-    id: "ar2",
-    severity: "critical",
-    regex: /علاوة على ذلك/g,
-    label: "علاوة على ذلك",
-  },
-  {
-    id: "ar3",
-    severity: "critical",
-    regex: /تجدر الإشارة/g,
-    label: "تجدر الإشارة",
-  },
-  {
-    id: "ar4",
-    severity: "critical",
-    regex: /من الجدير بالذكر/g,
-    label: "من الجدير بالذكر",
-  },
-  {
-    id: "ar5",
-    severity: "critical",
-    regex: /يجدر الذكر/g,
-    label: "يجدر الذكر",
-  },
-  { id: "ar6", severity: "critical", regex: /وبالتالي/g, label: "وبالتالي" },
-  { id: "ar7", severity: "critical", regex: /ومن ثم/g, label: "ومن ثم" },
-  { id: "ar8", severity: "critical", regex: /في الختام/g, label: "في الختام" },
-  { id: "ar9", severity: "critical", regex: /لا سيما/g, label: "لا سيما" },
-  {
-    id: "ar10",
-    severity: "critical",
-    regex: /في سياق متصل/g,
-    label: "في سياق متصل",
-  },
-  {
-    id: "ar11",
-    severity: "critical",
-    regex: /في هذا السياق/g,
-    label: "في هذا السياق",
-  },
-  {
-    id: "ar12",
-    severity: "critical",
-    regex: /من ناحية أخرى/g,
-    label: "من ناحية أخرى",
-  },
-  {
-    id: "ar13",
-    severity: "critical",
-    regex: /إلى جانب ذلك/g,
-    label: "إلى جانب ذلك",
-  },
-  {
-    id: "ar14",
-    severity: "critical",
-    regex: /فضلاً عن ذلك/g,
-    label: "فضلاً عن ذلك",
-  },
-  {
-    id: "ar15",
-    severity: "critical",
-    regex: /يُعدّ من أهم/g,
-    label: "يُعدّ من أهم",
-  },
-  {
-    id: "ar16",
-    severity: "critical",
-    regex: /يعتبر من أبرز/g,
-    label: "يعتبر من أبرز",
-  },
-  {
-    id: "ar17",
-    severity: "critical",
-    regex: /من هذا المنطلق/g,
-    label: "من هذا المنطلق",
-  },
-  { id: "ar18", severity: "critical", regex: /وعليه فإن/g, label: "وعليه فإن" },
-  {
-    id: "ar19",
-    severity: "critical",
-    regex: /بناءً على ذلك/g,
-    label: "بناءً على ذلك",
-  },
-  { id: "ar20", severity: "critical", regex: /في إطار/g, label: "في إطار" },
-  { id: "ar21", severity: "critical", regex: /على صعيد/g, label: "على صعيد" },
-  { id: "ar22", severity: "critical", regex: /في ظل/g, label: "في ظل" },
-  { id: "ar23", severity: "critical", regex: /في ضوء ما/g, label: "في ضوء ما" },
-  { id: "ar24", severity: "critical", regex: /حيث أن/g, label: "حيث أن" },
-  {
-    id: "ar25",
-    severity: "critical",
-    regex: /الأمر الذي/g,
-    label: "الأمر الذي",
-  },
-
-  // ===== HIGH — Arabic =====
-  { id: "arh1", severity: "high", regex: /بالطبع/g, label: "بالطبع" },
-  { id: "arh2", severity: "high", regex: /بشكل كبير/g, label: "بشكل كبير" },
-  { id: "arh3", severity: "high", regex: /بشكل عام/g, label: "بشكل عام" },
-  { id: "arh4", severity: "high", regex: /بشكل ملحوظ/g, label: "بشكل ملحوظ" },
-  { id: "arh5", severity: "high", regex: /بشكل أساسي/g, label: "بشكل أساسي" },
-  { id: "arh6", severity: "high", regex: /من المهم أن/g, label: "من المهم أن" },
-  { id: "arh7", severity: "high", regex: /يجب الإشارة/g, label: "يجب الإشارة" },
-  { id: "arh8", severity: "high", regex: /مع تطور/g, label: "مع تطور" },
-  {
-    id: "arh9",
+    id: "h13",
     severity: "high",
-    regex: /في الوقت الحاضر/g,
-    label: "في الوقت الحاضر",
+    regex: /\bplays?\s+a\s+vital\s+role\b/gi,
+    label: "plays a vital role",
   },
   {
-    id: "arh10",
+    id: "h14",
     severity: "high",
-    regex: /في عالمنا المعاصر/g,
-    label: "في عالمنا المعاصر",
+    regex: /\bplays?\s+a\s+key\s+role\b/gi,
+    label: "plays a key role",
   },
+  {
+    id: "h15",
+    severity: "high",
+    regex: /\bshed[s]?\s+light\s+on\b/gi,
+    label: "shed light on",
+  },
+  {
+    id: "h16",
+    severity: "high",
+    regex: /\bnavigat(e|ing)\s+the\s+complexit/gi,
+    label: "navigating the complexity",
+  },
+  {
+    id: "m1",
+    severity: "medium",
+    regex: /\btherefore\b/gi,
+    label: "therefore",
+  },
+  {
+    id: "m2",
+    severity: "medium",
+    regex: /\bconsequently\b/gi,
+    label: "consequently",
+  },
+  {
+    id: "m3",
+    severity: "medium",
+    regex: /\bsubsequently\b/gi,
+    label: "subsequently",
+  },
+  {
+    id: "m4",
+    severity: "medium",
+    regex: /\bnevertheless\b/gi,
+    label: "nevertheless",
+  },
+  {
+    id: "m5",
+    severity: "medium",
+    regex: /\bnonetheless\b/gi,
+    label: "nonetheless",
+  },
+  { id: "m6", severity: "medium", regex: /\bthus\b/gi, label: "thus" },
+  { id: "m7", severity: "medium", regex: /\bhence\b/gi, label: "hence" },
+  { id: "m8", severity: "medium", regex: /\bnotably\b/gi, label: "notably" },
 ];
 
 export function countPatterns(text: string): {
