@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #F6FAFD;
+  color: #000F22;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #3F6593; color: white; }
+
+textarea, button, input { font-family: inherit; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(63, 101, 147, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 101, 147, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+}
+
+.text-body {
+  unicode-bidi: plaintext;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+textarea::-webkit-scrollbar,
+.text-body::-webkit-scrollbar { width: 8px; }
+textarea::-webkit-scrollbar-thumb,
+.text-body::-webkit-scrollbar-thumb {
+  background: #DCE7F2;
+  border-radius: 4px;
+}
